@@ -1,0 +1,10 @@
+.Search {
+	margin: 1.5em auto 3.5em;
+	width: 60%;
+}
+
+.waves-effect.waves-blue .waves-ripple {
+	/* The alpha value allows the text and background color
+   of the button to still show through. */
+	background-color: rgba(101, 204, 233, 0.65);
+}

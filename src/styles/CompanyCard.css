@@ -1,0 +1,16 @@
+.CompanyCard .card-title {
+	height: auto;
+	margin-top: 0.4em;
+}
+
+.CompanyCard-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: black;
+}
+
+.CompanyCard-building {
+	width: 12%;
+	height: auto;
+}

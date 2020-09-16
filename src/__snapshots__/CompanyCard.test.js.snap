@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot for company 1`] = `
+<DocumentFragment>
+  <div
+    class="CompanyCard"
+  >
+    <a
+      class="col m12"
+      href="/companies/walmart"
+    >
+      <div
+        class="card"
+      >
+        <div
+          class="card-content"
+        >
+          <div
+            class="CompanyCard-header"
+          >
+            <h4
+              class="card-title"
+            >
+              Walmart
+            </h4>
+            <img
+              alt="Walmart Logo"
+              class="CompanyCard-building"
+              src="http://walmart.com/image.jpg"
+            />
+          </div>
+          <p>
+            Family Company
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;

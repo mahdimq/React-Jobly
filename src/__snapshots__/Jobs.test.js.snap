@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot with no jobs 1`] = `
+<DocumentFragment>
+  <div
+    class="row container"
+  >
+    <div
+      class="Search container"
+    >
+      <form>
+        <input
+          name="search"
+          placeholder="Enter search term.."
+          type="text"
+          value=""
+        />
+        <button
+          class="waves-effect waves-blue waves-ripple btn-flat right"
+          type="submit"
+        >
+          Search
+          <i
+            class="material-icons right"
+          >
+            send
+          </i>
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
