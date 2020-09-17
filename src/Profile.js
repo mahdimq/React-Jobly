@@ -23,10 +23,10 @@ function Profile() {
 	const messageShownRef = useRef(false);
 	useEffect(
 		function () {
-			if (formData.user && !messageShownRef.current) {
+			if (formData.userSaved && !messageShownRef.current) {
 				messageShownRef.current = true;
 				setTimeout(function () {
-					setFormData((f) => ({ ...f, user: false }));
+					setFormData((f) => ({ ...f, userSaved: false }));
 					messageShownRef.current = false;
 				}, 3000);
 			}
@@ -52,7 +52,7 @@ function Profile() {
 			setFormData((f) => ({
 				...f,
 				errors: [],
-				user: true,
+				userSaved: true,
 				password: ''
 			}));
 			setUser(updatedUser);
