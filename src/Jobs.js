@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Search from './Search';
 import JobCard from './JobCard';
 import JoblyApi from './JoblyApi';
-import UserContext from './UserContext';
 
 function Jobs() {
 	const [jobs, setJobs] = useState([]);
