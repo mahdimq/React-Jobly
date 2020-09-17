@@ -10,8 +10,8 @@ function Login({ setToken }) {
 	const [loginData, setLoginData] = useState({
 		username: '',
 		password: '',
-		firstName: '',
-		lastName: '',
+		first_name: '',
+		last_name: '',
 		email: '',
 		errors: []
 	});
@@ -33,8 +33,8 @@ function Login({ setToken }) {
 			data = {
 				username: loginData.username,
 				password: loginData.password,
-				firstName: loginData.firstName || undefined,
-				lastName: loginData.lastName || undefined,
+				first_name: loginData.first_name || undefined,
+				last_name: loginData.last_name || undefined,
 				email: loginData.email || undefined
 			};
 			endpoint = 'register';
@@ -69,27 +69,27 @@ function Login({ setToken }) {
 			<div className='input-field col s12 m12 l6'>
 				<i className='material-icons prefix'>account_box</i>
 				<input
-					id='firstName'
+					id='first_name'
 					type='text'
 					className='validate'
-					name='firstName'
-					value={loginData.firstName}
+					name='first_name'
+					value={loginData.first_name}
 					onChange={handleChange}
 				/>
-				<label htmlFor='firstName'>First Name</label>
+				<label htmlFor='first_name'>First Name</label>
 			</div>
 
 			<div className='input-field col s12 m12 l6'>
 				<i className='material-icons prefix'>account_box</i>
 				<input
-					id='lastName'
+					id='last_name'
 					type='text'
 					className='validate'
-					name='lastName'
-					value={loginData.lastName}
+					name='last_name'
+					value={loginData.last_name}
 					onChange={handleChange}
 				/>
-				<label htmlFor='lastName'>Last Name</label>
+				<label htmlFor='last_name'>Last Name</label>
 			</div>
 
 			<div className='input-field col s12 m12 l6'>

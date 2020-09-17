@@ -10,8 +10,8 @@ function Profile() {
 	const INITIAL_STATE = {
 		username: user.username,
 		password: '',
-		firstName: user.firstName || '',
-		lastName: user.lastName || '',
+		first_name: user.first_name || '',
+		last_name: user.last_name || '',
 		email: user.email || '',
 		photo_url: user.photo_url || '',
 		userSaved: false,
@@ -23,10 +23,10 @@ function Profile() {
 	const messageShownRef = useRef(false);
 	useEffect(
 		function () {
-			if (formData.saveConfirmed && !messageShownRef.current) {
+			if (formData.user && !messageShownRef.current) {
 				messageShownRef.current = true;
 				setTimeout(function () {
-					setFormData((f) => ({ ...f, saveConfirmed: false }));
+					setFormData((f) => ({ ...f, user: false }));
 					messageShownRef.current = false;
 				}, 3000);
 			}
@@ -39,8 +39,8 @@ function Profile() {
 
 		try {
 			let profileData = {
-				firstName: formData.firstName || undefined,
-				lastName: formData.lastName || undefined,
+				first_name: formData.first_name || undefined,
+				last_name: formData.last_name || undefined,
 				email: formData.email || undefined,
 				photo_url: formData.photo_url || undefined,
 				password: formData.password
@@ -52,7 +52,7 @@ function Profile() {
 			setFormData((f) => ({
 				...f,
 				errors: [],
-				saveConfirmed: true,
+				user: true,
 				password: ''
 			}));
 			setUser(updatedUser);
@@ -78,13 +78,13 @@ function Profile() {
 					<div className='input-field col s12 m6'>
 						<i className='material-icons prefix'>account_box</i>
 						<input
-							id='firstName'
+							id='first_name'
 							className='validate'
-							name='firstName'
-							value={formData.firstName}
+							name='first_name'
+							value={formData.first_name}
 							onChange={handleChange}
 						/>
-						<label className='active' htmlFor='firstName'>
+						<label className='active' htmlFor='first_name'>
 							First Name
 						</label>
 					</div>
@@ -92,14 +92,14 @@ function Profile() {
 					<div className='input-field col s12 m6'>
 						<i className='material-icons prefix'>account_box</i>
 						<input
-							id='lastName'
+							id='last_name'
 							type='text'
 							className='validate'
-							name='lastName'
-							value={formData.lastName}
+							name='last_name'
+							value={formData.last_name}
 							onChange={handleChange}
 						/>
-						<label className='active' htmlFor='lastName'>
+						<label className='active' htmlFor='last_name'>
 							Last Name
 						</label>
 					</div>
@@ -173,60 +173,6 @@ function Profile() {
 				</button>
 			</form>
 		</div>
-
-		// <formData onSubmit={handleSubmit}>
-		// 	<div className='formData-group'>
-		// 		<label>Username</label>
-		// 		<p className='formData-control-plaintext'>{formData.username}</p>
-		// 	</div>
-
-		// 	<div className='formData-group'>
-		// 		<label>Last name</label>
-		// 		<input
-		// 			name='lastName'
-		// 			className='formData-control'
-		// 			value={formData.lastName}
-		// 			onChange={handleChange}
-		// 		/>
-		// 	</div>
-		// 	<div className='formData-group'>
-		// 		<label>Email</label>
-		// 		<input
-		// 			type='email'
-		// 			name='email'
-		// 			className='formData-control'
-		// 			value={formData.email}
-		// 			onChange={handleChange}
-		// 		/>
-		// 	</div>
-		// 	<div className='formData-group'>
-		// 		<label>Photo URL</label>
-		// 		<input
-		// 			type='photo_url'
-		// 			name='photo_url'
-		// 			className='formData-control'
-		// 			value={formData.photo_url}
-		// 			onChange={handleChange}
-		// 		/>
-		// 	</div>
-		// 	<div className='formData-group'>
-		// 		<label>Re-enter Password</label>
-		// 		<input
-		// 			type='password'
-		// 			name='password'
-		// 			className='formData-control'
-		// 			value={formData.password}
-		// 			onChange={handleChange}
-		// 		/>
-		// 	</div>
-		// 	{formData.errors.length ? <Alert type='danger' messages={formData.errors} /> : null}
-		// 	{formData.userSaved ? (
-		// 		<Alert type='success' messages={['User updated successfully.']} />
-		// 	) : null}
-		// 	<button type='submit' className='btn btn-primary btn-block mt-4'>
-		// 		Save Changes
-		// 	</button>
-		// </formData>
 	);
 }
 
