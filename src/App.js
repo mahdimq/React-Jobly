@@ -41,7 +41,7 @@ function App() {
 
 	if (!infoLoaded) {
 		return (
-			<div className='spinner-layer spinner-red'>
+			<div className='spinner-layer spinner-red center'>
 				<div className='circle-clipper left'>
 					<div className='circle'></div>
 				</div>
