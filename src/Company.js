@@ -37,19 +37,8 @@ function Company() {
 	}
 	if (!company) {
 		return (
-			// <div className='spinner-layer spinner-red center'>
-			// 	<div className='circle-clipper left'>
-			// 		<div className='circle'></div>
-			// 	</div>
-			// 	<div className='gap-patch'>
-			// 		<div className='circle'></div>
-			// 	</div>
-			// 	<div className='circle-clipper right'>
-			// 		<div className='circle'></div>
-			// 	</div>
-			// </div>
-			<div>
-				<h2 style={{ margin: '2em auto' }}>Loading...</h2>
+			<div style={{ display: 'flex', justifyContent: 'center', marginTop: '4em' }}>
+				<h5>Loading...</h5>
 			</div>
 		);
 	}
